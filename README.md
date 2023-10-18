@@ -55,7 +55,7 @@ Every step can be performed separately by using methods given below:
 
  ## Example usage
 
-`print(full_computation('{"title": "mocktitle", "n_workers": 4, "random_seed": 5, "n_sims": 6, "threshold": 0}'))`
+`full_computation('{"title": "mocktitle", "n_workers": 4, "random_seed": 5, "n_sims": 6, "threshold": 0}')`
  
 output:
 ```
