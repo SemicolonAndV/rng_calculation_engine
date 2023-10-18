@@ -52,3 +52,5 @@ Every step can be performed separately by using methods given below:
  `python -m unittest test_calculator.py`
  
  More info about the steps and components can be found in the source code.
+
+ Created by Kuba Pająk
