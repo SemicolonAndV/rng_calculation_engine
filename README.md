@@ -53,4 +53,63 @@ Every step can be performed separately by using methods given below:
  
  More info about the steps and components can be found in the source code.
 
+ ## Example usage
+
+`print(full_computation('{"title": "mocktitle", "n_workers": 4, "random_seed": 5, "n_sims": 6, "threshold": 0}'))`
+ 
+output:
+```
+{
+    "title": "mocktitle", 
+    "statistics": {
+        "worker_0": {
+            "numof_samples": 2,
+            "numof_samples_thresh": 2, 
+            "max_result": 0.7417869892607294, 
+            "min_result": 0.6229016948897019, 
+            "median": 0.6823443420752157, 
+            "count_distinct": 2,
+            "sum": 1.3646886841504313
+        }, 
+        "worker_1": {
+            "numof_samples": 2,
+            "numof_samples_thresh": 2, 
+            "max_result": 0.8219540423197268, 
+            "min_result": 0.793340083761663, 
+            "median": 0.8076470630406949, 
+            "count_distinct": 2, 
+            "sum": 1.6152941260813898
+        }, 
+        "worker_2": {
+            "numof_samples": 1, 
+            "numof_samples_thresh": 1, 
+            "max_result": 0.32383276483316237, 
+            "min_result": 0.32383276483316237, 
+            "median": 0.32383276483316237, 
+            "count_distinct": 1, 
+            "sum": 0.32383276483316237
+        }, 
+        "worker_3": {
+            "numof_samples": 1,  
+            "numof_samples_thresh": 1, 
+            "max_result": 0.2267058593810488, 
+            "min_result": 0.2267058593810488, 
+            "median": 0.2267058593810488, 
+            "count_distinct": 1, 
+            "sum": 0.2267058593810488
+        }, 
+        "Total": {
+            "numof_samples": 6, 
+            "numof_samples_thresh": 6, 
+            "max_result": 0.8219540423197268, 
+            "min_result": 0.2267058593810488, 
+            "median": 0.6823443420752157, 
+            "count_distinct": 6, 
+            "sum": 3.5305214344460323
+        }
+    }
+}
+```
+
+
  Created by Kuba Pająk

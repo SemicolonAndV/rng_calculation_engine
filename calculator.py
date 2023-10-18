@@ -4,7 +4,7 @@ import random
 from schema import schema
 from multiprocessing import Process, Pipe
 import pandas as pd
-import argparse
+from pprint import pprint
 
 def load_input(inp: str) -> dict:
     """The "setup" step for reading and validating input data.
@@ -160,15 +160,15 @@ def parse_results(data: dict, results: pd.DataFrame, results_collective: pd.Data
     Returns:
         str: summary of calculations in JSON
     """
-    outp = {"title": data["title"], "statistics": {}}
-    stats = outp["statistics"]
+    summary = {"title": data["title"], "statistics": {}}
+    stats = summary["statistics"]
     for res in results.columns:
         current_col = res
         stats[current_col] = reduce_col(results, current_col, data.get("threshold", 0))
         
     stats["Total"] = reduce_col(results_collective, "Total", data.get("threshold", 0))
     
-    return json.dumps(stats)
+    return json.dumps(summary)
         
 def reduce_col(df: pd.DataFrame, colname: str, threshold: float) -> dict:
     """Generate statistics for calculations' results
